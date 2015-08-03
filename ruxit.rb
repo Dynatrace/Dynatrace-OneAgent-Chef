@@ -1,7 +1,7 @@
 tmp_dir = "/tmp"
 filename = "ruxit-Agent-Linux.sh"
-tenant = "aexocnxmyl"
-token = "MQ5FPdEtFPYuVwbu"
+tenant = "aexocxmyl"
+token = "MQ5FPEtFPYuVwbu"
 
 directory "#{tmp_dir}"
 
