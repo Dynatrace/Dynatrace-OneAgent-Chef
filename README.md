@@ -27,7 +27,7 @@ The token for your ruxit tenant. You can get your token by following these steps
 4. You will see the **wget** command line. The token is the last part of the path after **/latest/**
     
     <code>wget -O ruxit-Agent-Linux-1.XX.0.2015XXXX-XXXXXX.sh https://{tenant}.live.ruxit.com/installer/agent/unix/latest/{this-is-the-token}</code>
-5. copy it and use it in your puppet config
+5. copy it and use it in your recipe
 
 ## Supported OSes
 This recipe is designed for Linux systems. 
