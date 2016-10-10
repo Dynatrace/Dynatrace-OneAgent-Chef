@@ -27,8 +27,8 @@ The subdomain {environment} represents your environment id.
 The token for your Dynatrace environment. You can get your token by following these steps
 
 1. go to your Dynatrace environment: https://{environment}.live.dynatrace.com
-2. Click the burger menu in the right upper corner and select **Monitor another host**
-3. You will see the "Download Ruxit Agent" wizard; click **Linux**
+2. Click the burger menu in the right upper corner and select **Deploy Dynatrace**
+3. You will see the "Start installation" wizard; click **Linux**
 4. You will see the **wget** command line. The token is the last part of the path after **/latest/**
     
     <code>wget -O dynatrace-OneAgent-Linux-1.XX.0.2017XXXX-XXXXXX.sh https://{environment}.live.dynatrace.com/installer/agent/unix/latest/{this-is-the-token}</code>
