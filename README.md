@@ -35,7 +35,7 @@ The token for your Dynatrace environment. You can get your token by following th
 5. copy it and use it in your recipe
 
 ## Supported OSes
-This recipe is designed for Linux systems. 
+This recipe is designed for Linux and Windows systems. 
 If it does not work for your environment please get in touch via the project site.
 
 ##License
