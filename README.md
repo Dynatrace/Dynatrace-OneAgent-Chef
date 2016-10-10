@@ -3,9 +3,14 @@
 This recipe downloads and installs the [Dynatrace](http://www.dynatrace.com/) OneAgent on linux systems.
 
 ### Sample Usage
-
+####Linux
 ```
-sudo chef-apply oneagent.rb
+sudo chef-apply oneagent-linux.rb
+```
+
+####Windows
+```
+sudo chef-apply oneagent-windows.rb
 ```
 
 ### Configuration
