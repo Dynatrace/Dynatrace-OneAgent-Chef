@@ -10,7 +10,7 @@ sudo chef-apply oneagent-linux.rb
 
 ####Windows
 ```
-sudo chef-apply oneagent-windows.rb
+chef-apply oneagent-windows.rb
 ```
 
 ### Configuration
