@@ -1,15 +1,15 @@
 tmp_dir = "/tmp"
-filename = "ruxit-Agent-Linux.sh"
-tenant = "aexocxmyl"
-token = "MQ5FPEtFPYuVwbu"
+filename = "dynatrace-oneagent-Linux.sh"
+environment = "<insert your environment id here>"
+token = "<insert your token here>"
 
 directory "#{tmp_dir}"
 
 remote_file "#{tmp_dir}/#{filename}" do
-   source "https://#{tenant}.live.ruxit.com/installer/agent/unix/latest/#{token}"
+   source "https://#{environment}.live.dynatrace.com/installer/agent/unix/latest/#{token}"
 end
 
-script "ruxit-Agent-Linux" do
+script "dynatrace-oneagent-Linux" do
    interpreter "sh"
    user "root"
    code <<-EOH
