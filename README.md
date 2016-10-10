@@ -5,7 +5,7 @@ This recipe downloads and installs the [Dynatrace](http://www.dynatrace.com/) On
 ### Sample Usage
 
 ```
-sudo chef-apply dynatrace.rb
+sudo chef-apply oneagent.rb
 ```
 
 ### Configuration
