@@ -1,32 +1,32 @@
 ## Overview
 
-This recipe downloads and installs the [ruxit](http://www.ruxit.com/) unified agent on linux systems.
+This recipe downloads and installs the [Dynatrace](http://www.dynatrace.com/) OneAgent on linux systems.
 
 ### Sample Usage
 
 ```
-sudo chef-apply ruxit.rb
+sudo chef-apply dynatrace.rb
 ```
 
 ### Configuration
 Please edit the recipe's variables according to your needs.
 
-####`tenant`
-Your ruxit tenant ID is the unique identifier of your ruxit environment. You can find it easily by looking at the URL in your browser when you are logged into your Ruxit home page.
+####`environment`
+Your Dynatrace environment ID is the unique identifier of your Dynatrace environment. You can find it easily by looking at the URL in your browser when you are logged into your Dynatrace dashboard.
 
-<code>https://{tenant}.live.ruxit.com</code>
+<code>https://{environment}.live.dynatrace.com</code>
 
-The subdomain {tenant} represents your tenant id.
+The subdomain {environment} represents your environment id.
 
 ####`token`
-The token for your ruxit tenant. You can get your token by following these steps
+The token for your Dynatrace environment. You can get your token by following these steps
 
-1. go to your ruxit environment: https://{tenant}.live.ruxit.com
+1. go to your Dynatrace environment: https://{environment}.live.dynatrace.com
 2. Click the burger menu in the right upper corner and select **Monitor another host**
 3. You will see the "Download Ruxit Agent" wizard; click **Linux**
 4. You will see the **wget** command line. The token is the last part of the path after **/latest/**
     
-    <code>wget -O ruxit-Agent-Linux-1.XX.0.2015XXXX-XXXXXX.sh https://{tenant}.live.ruxit.com/installer/agent/unix/latest/{this-is-the-token}</code>
+    <code>wget -O dynatrace-OneAgent-Linux-1.XX.0.2017XXXX-XXXXXX.sh https://{environment}.live.dynatrace.com/installer/agent/unix/latest/{this-is-the-token}</code>
 5. copy it and use it in your recipe
 
 ## Supported OSes
