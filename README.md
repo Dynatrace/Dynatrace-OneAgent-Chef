@@ -1,6 +1,6 @@
 ## Overview
 
-This recipe downloads and installs the [Dynatrace](http://www.dynatrace.com/) OneAgent on linux systems.
+This recipe downloads and installs the [Dynatrace](http://www.dynatrace.com/) OneAgent on Linux or Windows systems.
 
 ### Sample Usage
 ####Linux
