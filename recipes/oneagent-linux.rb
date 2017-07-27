@@ -1,12 +1,15 @@
+#
+# Cookbook Name:: dynatrace
+# Recipes:: oneagent-linux
+#
 tmp_dir = "/tmp"
 filename = "dynatrace-oneagent-Linux.sh"
-environment = "<insert your environment id here>"
-token = "<insert your token here>"
+download_link = node['download_link']
 
 directory "#{tmp_dir}"
 
 remote_file "#{tmp_dir}/#{filename}" do
-   source "https://#{environment}.live.dynatrace.com/installer/agent/unix/latest/#{token}"
+   source "#{download_link}"
 end
 
 script "dynatrace-oneagent-Linux" do

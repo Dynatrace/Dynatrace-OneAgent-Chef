@@ -1,0 +1,6 @@
+name 'oneagent'
+maintainer 'Piotr Mejer'
+maintainer_email 'piotr.mejer@dynatrace.com'
+license 'MIT'
+description 'Installs the Dynatrace One Agent.'
+version '1.0.0'

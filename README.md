@@ -5,34 +5,24 @@ This recipe downloads and installs the [Dynatrace](http://www.dynatrace.com/) On
 ### Sample Usage
 ####Linux
 ```
-sudo chef-apply oneagent-linux.rb
-```
-
-####Windows
-```
-chef-apply oneagent-windows.rb
+knife ssh 'name:oneagent_test' 'sudo chef-client' --ssh-user user_name
 ```
 
 ### Configuration
-Please edit the recipe's variables according to your needs.
+Please edit the download_link in attributes according to your needs.
 
-####`environment`
-Your Dynatrace environment ID is the unique identifier of your Dynatrace environment. You can find it easily by looking at the URL in your browser when you are logged into your Dynatrace dashboard.
+####`download_link`
+The link to dynatrace one agent. You can get your link by following these steps
 
-<code>https://{environment}.live.dynatrace.com</code>
-
-The subdomain {environment} represents your environment id.
-
-####`token`
-The token for your Dynatrace environment. You can get your token by following these steps
-
-1. go to your Dynatrace environment: https://{environment}.live.dynatrace.com
-2. Click the burger menu in the right upper corner and select **Deploy Dynatrace**
-3. You will see the "Start installation" wizard; click **Linux**
-4. You will see the **wget** command line. The token is the last part of the path after **/latest/**
-    
-    <code>wget -O dynatrace-OneAgent-Linux-1.XX.0.2017XXXX-XXXXXX.sh https://{environment}.live.dynatrace.com/installer/agent/unix/latest/{this-is-the-token}</code>
-5. copy it and use it in your recipe
+1. go to your dynatrace environment: https://{tenant}.live.dynatrace.com
+2. Click the burger menu in the left upper corner and select **Hosts**
+3. Click **Monitor another host** button in the right upper corner.
+3. You will see the "Download Dynatrace OneAgent" wizard; select  operation system. 
+4  For **Linux** 
+   -    You will see the **wget** command line. You can copy Your link.
+4. For **Windows**
+    - Rightclick on "Download agent.exe" button and select "Copy link address"
+5. Use the link in your attributes.
 
 ## Supported OSes
 This recipe is designed for Linux and Windows systems. 
