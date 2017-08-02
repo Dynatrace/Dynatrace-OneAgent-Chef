@@ -1,7 +1,9 @@
 #
-# Cookbook Name:: dynatrace
-# Recipes:: oneagent-linux
+# Cookbook:: dynatraceoneagent
+# Recipe:: oneagent-linux
 #
+# Copyright:: 2017, Dynatrace
+
 tmp_dir = "/tmp"
 filename = "dynatrace-oneagent-Linux.sh"
 download_link = node['download_link']
