@@ -8,10 +8,10 @@ tmp_dir = "/tmp"
 filename = "dynatrace-oneagent-Linux.sh"
 download_link = node['download_link']
 
-directory "#{tmp_dir}"
+directory tmp_dir
 
 remote_file "#{tmp_dir}/#{filename}" do
-   source "#{download_link}"
+   source download_link
 end
 
 script "dynatrace-oneagent-Linux" do
