@@ -12,14 +12,14 @@ knife ssh 'name:oneagent_test' 'sudo chef-client' --ssh-user user_name
 ```
 
 ### Configuration
-Please edit the download_link in attributes according to your needs.
+Please edit the **download_link** in **attributes** according to your needs.
 
 #### `download_link`
-The link to dynatrace one agent. You can get your link by following these steps
+The link to Dynatrace OneAgent. You can get your link by following these steps
 
 1. Select **Deploy Dynatrace** from the navigation menu.
 2. Click the **Start installation** button.
-3  For **Linux** 
+3.  For **Linux**
    - Locate your `download_link`, as shown below. 
    ![Alt text](https://github.com/Dynatrace/Dynatrace-OneAgent-Chef/blob/master/Install_Dynatrace_OneAgent_on_your_Linux.png)
 4. For **Windows**
