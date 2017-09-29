@@ -21,7 +21,7 @@ The link to dynatrace one agent. You can get your link by following these steps
 2. Click the **Start installation** button.
 3  For **Linux** 
    - Locate your `download_link`, as shown below. 
-   ![Alt text](https://help.dynatrace.com/images/content/infrastructure-monitoring/containers/openshift-installer.png)
+   ![Alt text](https://github.com/Dynatrace/OneAgent-images/blob/master/Install_Dynatrace_OneAgent_on_your_Linux.png)
 4. For **Windows**
     - Rightclick on "Download agent.exe" button and select "Copy link address"
 5. Use the link in your attributes.
