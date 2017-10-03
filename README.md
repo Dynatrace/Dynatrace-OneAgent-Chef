@@ -21,7 +21,7 @@ The link to Dynatrace OneAgent. You can get your link by following these steps
 2. Click the **Start installation** button.
 3.  For **Linux**
    - Locate your `download_link`, as shown below. 
-   ![Alt text](https://github.com/Dynatrace/Dynatrace-OneAgent-Chef/blob/master/Install_Dynatrace_OneAgent_on_your_Linux.png)
+   ![Alt text](https://user-images.githubusercontent.com/23307837/31117056-a912fb0c-a828-11e7-8020-f065adf65fa9.png)
 4. For **Windows**
     - Rightclick on "Download agent.exe" button and select "Copy link address"
 5. Use the link in your attributes.
