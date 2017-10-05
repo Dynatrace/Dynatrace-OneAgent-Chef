@@ -1,4 +1,4 @@
-# DynatraceOneAgent
+# Dynatrace OneAgent
 
 ## Overview
 
