@@ -2,12 +2,6 @@
 # Cookbook:: dynatraceoneagent
 # Recipe:: default
 #
-# Copyright:: 2017, Dynatrace
+# Copyright:: 2021, Dynatrace, LLC.
 
-if platform_family?('windows')
-  include_recipe 'dynatraceoneagent::oneagent-windows'
-else
-  include_recipe 'dynatraceoneagent::oneagent-linux'
-end
-
-
+include_recipe 'dynatraceoneagent::oneagent_download'
