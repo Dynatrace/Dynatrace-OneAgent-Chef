@@ -1,0 +1,51 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 2048
+
+## The forwarded_port port feature lets you connect to ports on the VM guest via
+## localhost on the host.
+## see also: https://www.vagrantup.com/docs/networking/forwarded_ports.html
+
+#  network:
+#    - ["forwarded_port", {guest: 80, host: 8080}]
+
+provisioner:
+  name: chef_zero
+
+  ## product_name and product_version specifies a specific Chef product and version to install.
+  ## see the Chef documentation for more details: https://docs.chef.io/config_yml_kitchen.html
+  #  product_name: chef
+  #  product_version: 15
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-18.04
+  - name: centos-7
+  - name: generic/rhel8
+  - name: windows-2012r2
+    driver_config:
+      box: tas50/windows_2012r2
+      gui: false
+  - name: windows_2019
+    driver_config:
+      box: tas50/windows_2019
+      gui: false
+
+suites:
+  - name: default
+    run_list: dynatraceoneagent
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
+      dynatraceoneagent:
+        dynatrace_environment_url: https://{your-environment-id}.live.dynatrace.com
+        dynatrace_paas_token: {your-paas-token}
+        check_installer_signature: true
+        oneagent_version: 1.217.74.20210504-135638
+        oneagent_package_state: installed
+        oneagent_preserve_installer: true
