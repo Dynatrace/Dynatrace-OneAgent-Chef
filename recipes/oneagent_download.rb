@@ -5,7 +5,6 @@
 # Copyright:: 2021, Dynatrace, LLC.
 
 oneagent_installer_path = node['dynatraceoneagent']['oneagent_installer_path']
-dynatrace_paas_token = node['dynatraceoneagent']['dynatrace_paas_token']
 dynatrace_environment_url = node['dynatraceoneagent']['dynatrace_environment_url']
 dynatrace_deployment_api = node['dynatraceoneagent']['dynatrace_deployment_api']
 oneagent_os_type = node['dynatraceoneagent']['oneagent_os_type']
@@ -14,6 +13,16 @@ oneagent_installer_architecture = node['dynatraceoneagent']['oneagent_installer_
 oneagent_version = node['dynatraceoneagent']['oneagent_version']
 oneagent_package_state = node['dynatraceoneagent']['oneagent_package_state']
 oneagent_ctl_bin_path = node['dynatraceoneagent']['oneagent_ctl_bin_path']
+
+# Get PaaS token. If attribute is empty, the value will be retrieved from data bag
+if node['dynatraceoneagent']['dynatrace_paas_token'].nil?
+  dynatrace_paas_token = data_bag_item(
+    node['dynatraceoneagent']['data_bag'],
+    node['dynatraceoneagent']['data_bag_item']
+  )['paas_token']
+else
+  dynatrace_paas_token = node['dynatraceoneagent']['dynatrace_paas_token']
+end
 
 case oneagent_version
 when 'latest'
