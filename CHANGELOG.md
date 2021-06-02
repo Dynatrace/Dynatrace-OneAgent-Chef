@@ -24,3 +24,9 @@ Bugfixes
 
 - Using cookbook specific attributes
 - Fixed windows installer
+
+# 0.3.0
+
+Features
+
+- Add possibility to retrieve PaaS token from data bag.

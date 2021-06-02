@@ -64,6 +64,12 @@ This module uses the Dynatrace deployment API for downloading the installer for 
 
   - Boolean. Preserve installers on a managed node after deployment, default `true`.
 
+- `node['dynatraceoneagent']['data_bag']`
+  - String. Data bag name where PaaS token is located, default `vault`.
+
+- `node['dynatraceoneagent']['data_bag_item']`
+  - String. Data bag item name where PaaS token is located, default `dynatrace`.
+
 - `node['dynatraceoneagent']['oneagent_install_params_hash']`
 
   - Hash. Hash map of additional parameters to pass to the installer. Refer to the Customize OneAgent installation documentation on [Dynatrace Supported Operating Systems]. Default `{
@@ -241,6 +247,29 @@ run_list(
 ```
 
 For Windows, because the parameter `oneagent_download_dir` is a string variable, 2 backslashes are required within the file path. Since the OneAgent install parameter `INSTALL_PATH` can be defined within the `oneagent_install_params_hash` hash map, no escaping is needed.
+
+#### OneAgent installation using a PaaS token from encrypted data bag
+
+Requires creating encrypted data bag:
+
+```
+cat data_bags/vault/dynatrace.json
+{
+  "id": "dynatrace",
+  "paas_token": "{your-paas-token}"
+}
+```
+
+Generate secret key which will be used for data bag encryption
+```
+openssl rand -base64 512 | tr -d '\r\n' > /tmp/my_secret_key
+```
+
+Encrypt created data bag
+```
+knife data bag from file vault data_bags/vault/dynatrace.json --local-mode --secret-file /tmp/my_secret_key
+
+```
 
 ## Authors
 
