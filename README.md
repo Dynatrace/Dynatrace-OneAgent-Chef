@@ -1,3 +1,7 @@
+⚠️ This repository has been archived and is no longer maintained.
+The code is available for historical reference or archival purposes.
+
+
 # dynatraceoneagent Cookbook
 
 [![Cookbook Version](https://img.shields.io/badge/cookbook-v0.2.0-blue)](https://supermarket.chef.io/cookbooks/dynatraceoneagent)
