@@ -13,6 +13,10 @@ default['dynatraceoneagent']['oneagent_installer_architecture'] = 'x86'
 default['dynatraceoneagent']['oneagent_installer_type'] = 'default'
 default['dynatraceoneagent']['oneagent_preserve_installer'] = true
 
+# Data bag default Parameters
+default['dynatraceoneagent']['data_bag'] = 'vault'
+default['dynatraceoneagent']['data_bag_item'] = 'dynatrace'
+
 # OneAgent Install Parameters
 default['dynatraceoneagent']['oneagent_install_params_hash'] = {
   '--set-infra-only'             => 'false',
